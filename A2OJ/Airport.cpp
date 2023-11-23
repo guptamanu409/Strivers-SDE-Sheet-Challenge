@@ -50,15 +50,10 @@ int main(){
     }
 
     //maximum
-    while(n){
-
-        for(int i = m-1; i>=0; i--){
-            if(v[i]==0) continue;
-            maxi+=v[i];
-            n--;
-            if(n==0) break;
-            v[i]--;
-        }
+    while(n--){
+        int ind = max_element(v.begin(),v.end()) - v.begin();
+        maxi+=v[ind];
+        v[ind] = --v[ind];
     }
 
     cout<<maxi<<" "<<mini<<endl;
