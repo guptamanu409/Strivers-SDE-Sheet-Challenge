@@ -1,6 +1,6 @@
-for(int i = 0; i<n; i++){
-    //     for(int j = 0; j<m; j++){
-    //         cout<<v[i][j];
-    //     }
-    //     cout<<endl;
+for(auto &it:mp){
+    //     // if(it.second&1) odd++;
+    //     // else even++;
+    //     cout<<it.first<<" "<<it.second<<endl;
     // }
+    
