@@ -11,20 +11,28 @@ int main(){
     for(int i = 0; i<n; i++){
         int x;
         cin>>x;
-        if(x==25)tf++;
+        if(x==25) tf+=25;
         else if(x==50){
             if(tf==0){
                 check = false;
                 break;
             }
-            else tf--,ff++;
+            else tf-=25,ff+=50;
         }
         else if(x==100){
-            if(ff==0){
+            if(ff>=50 && tf>=25){
+                ff-=50;
+                tf-=25;
+                oh+=100;
+            }
+            else if(tf>=75){
+                tf-=75;
+                oh+=100;
+            }
+            else {
                 check = false;
                 break;
             }
-            else ff--,oh++;
         }
     }
 
