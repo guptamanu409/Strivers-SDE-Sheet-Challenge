@@ -1,2 +1,2 @@
-
-        // cout<<arr[2]<<e
+_stdio(false);
+    // cin.tie(NULL);

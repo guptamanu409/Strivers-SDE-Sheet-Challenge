@@ -29,20 +29,22 @@ int main(){
         // cout<<'\n';
 
         // cout<<endl;
-        long long l=0,r=n-1;
+        long long l=0,r=0;
         long long ans = 0;
 
         while(r<n){
             while(l<n){
                 // cout<<"l ki value "<<l<<endl;
                 if(arr[l]>0){
-                    r = l+1;
+                    // r = l+1;
                     break;
                 }
                 else l++;
                 // cout<<"l ki value "<<l<<endl;
             }
             
+            while(r<l) r++;
+
             while(r<n){
                 // cout<<"r ki value "<<r<<endl;
                 if(arr[r]<0) break;
