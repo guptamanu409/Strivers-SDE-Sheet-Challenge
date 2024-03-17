@@ -2,6 +2,7 @@
 using namespace std;
 
 #define endl '\n'
+#define prime 999999997  //Largest Prime number before 1e9
 
 int main(){
 
