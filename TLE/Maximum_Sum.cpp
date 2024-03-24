@@ -26,16 +26,38 @@ int main(){
             maxi = max(maxi,sum);
             if(sum<0) sum = 0;
         }
-        if(maxi<=0){
-            long long sum = 0;
-            for(int i = 0; i<n; i++){
-                sum = ((sum%mod) + (v[i]%mod))%mod;
-                // sum = (sum+v[i])%mod;
-                // sum+=v[i];
-            }
-            // cout<<(long long)mod-sum<<'\n';
-            cout<<(int)(1e9+7)-(int)sum<<endl;
+        
+        sum = 0;
+        for(int i = 0; i<n; i++){
+            // sum = ((sum%mod) + (v[i]%mod))%mod;
+            // sum = (sum+v[i])%mod;
+            // sum+=v[i];
+
+            long long temp = (v[i]+mod)%mod; // Handled Negative values
+            sum = (sum + temp)%mod;
         }
+
+        if(maxi>0){
+            for(int i = 0; i<k; i++){
+                sum = (sum+maxi)%mod;
+                maxi = (maxi*2)%mod;
+            }
+        }
+        
+        cout<<sum<<'\n';
+        // cout<<(long long)mod-sum<<'\n';
+        // cout<<(int)(1e9+7)-(int)sum<<endl;
+        
+        // if(maxi<=0){
+        //     long long sum = 0;
+        //     for(int i = 0; i<n; i++){
+        //         sum = ((sum%mod) + (v[i]%mod))%mod;
+        //         // sum = (sum+v[i])%mod;
+        //         // sum+=v[i];
+        //     }
+        //     // cout<<(long long)mod-sum<<'\n';
+        //     cout<<(int)(1e9+7)-(int)sum<<endl;
+        // }
     }
 
 
