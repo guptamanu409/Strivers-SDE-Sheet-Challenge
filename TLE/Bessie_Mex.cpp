@@ -69,15 +69,17 @@ int main(){
                     while(mp[temp]==1)temp++;
                     cout<<temp<<" ";
                     mp[temp]++;
-                    mini++;
+                    // mini++;
+                    mini = temp+1;
                 }
             }
             else{
                 int temp = mini - a[i];
                 if(mp[temp]==0){
                     cout<<temp<<" ";
-                    mini++;
+                    // mini++;
                     mp[temp]++;
+
                 }
                 else{
                     // int temp = mini;
@@ -85,9 +87,11 @@ int main(){
                     while(mp[temp]==1)temp++;
                     cout<<temp<<" ";
                     mp[temp]++;
-                    mini++;
+                    // mini++;
                 }
+                mini+= (temp==mini);
             }
+            while(mp[mini]==1)mini++;
         }
         cout<<'\n';
     }
