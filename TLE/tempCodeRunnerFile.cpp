@@ -1,8 +1,5 @@
-nt t;
-    // cin>>t;
 
-    // while(t--){
-
-    //     int n;
-    //     cin>>n;
+    // for(auto &it:s){
+    //     if(it!=' ')cnt++;
     // }
+    // cout<<cnt;
