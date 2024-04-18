@@ -48,7 +48,7 @@ int main(){
         for(int i = 0; i<q; i++){
             int val = p[i];
             int j = 0;
-            while(r[j]<=val){
+            while(r[j]<=val && j<k){
                 val = val - ((val-r[j])+1);
                 j++;
             }
