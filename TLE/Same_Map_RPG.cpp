@@ -16,6 +16,7 @@ int main(){
 
     for(int i = 1; i<=h; i++){
         string s;
+        s.push_back(' ');
         for(int j = 1; j<=w; j++){
             char x;
             cin>>x;
@@ -26,6 +27,7 @@ int main(){
     b.push_back("");
     for(int i = 1; i<=h; i++){
         string s;
+        s.push_back(' ');
         for(int j = 1; j<=w; j++){
             char x;
             cin>>x;
@@ -42,7 +44,8 @@ int main(){
 
     for(int s = 0; s<h; s++){
         for(int t = 0; t<w; t++){
-            cout<<s<<" "<<t<<'\n';
+            // cout<<"For this value of s and t ";
+            // cout<<s<<" "<<t<<'\n';
             bool check = true;
             for(int i = 1; i<=h; i++){
                 for(int j = 1; j<=w; j++){
@@ -50,6 +53,8 @@ int main(){
                     if(r==0)r = h;
                     int c = (j+t)%w;
                     if(c==0)c = w;
+                    // cout<<i<<" "<<j<<"-----"<<r<<" "<<c<<'\n';
+                    // cout<<a[r][c]<<" "<<b[i][j]<<'\n';
                     if(a[r][c]!=b[i][j]){
                         check = false;  
                         break;
@@ -57,6 +62,8 @@ int main(){
                 }
                 if(!check)break;
             }
+            // cout<<"--------";
+            // cout<<'\n';
             if(check){
                 cout<<"Yes"<<'\n';
                 return 0;
