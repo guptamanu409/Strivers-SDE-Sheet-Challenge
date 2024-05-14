@@ -24,7 +24,7 @@ int main(){
             continue;
         }
         else{
-            auto pos = upper_bound(mp.begin(),mp.end(),x);
+            auto pos = mp.upper_bound(x);
             pos--;
             cout<<*pos<<'\n';
             mp.erase(pos);
