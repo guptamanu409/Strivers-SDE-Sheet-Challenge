@@ -15,14 +15,39 @@ int main(){
         cin>>n>>m;
 
         if(n==1) cout<<"Yes"<<'\n'<<m<<'\n';
-        else if(n>1 && (m&1))cout<<"No"<<'\n';
-        else{
-            int quo = m/2;
-            cout<<"Yes"<<'\n'<<quo<<" "<<quo<<" ";
-            int rem = n-2;
-            while(rem--) cout<<0<<" ";
+        else if(m<n || ((m&1) && ((n&1)==0))) cout<<"No"<<'\n';
+        else if(m==n){
+            cout<<"Yes"<<'\n';
+            for(int i = 0; i<m; i++) cout<<1<<" ";
             cout<<'\n';
         }
+        else{
+            if(m&1){
+                n--;
+                int rem = m-n;
+                cout<<"Yes"<<'\n';
+                for(int i = 0; i<n; i++) cout<<1<<" ";
+                cout<<rem<<'\n'; 
+            }
+            else{
+                if(n&1){
+                    n--;
+                    int rem = m-n;
+                    cout<<"Yes"<<'\n';
+                    for(int i = 0; i<n; i++) cout<<1<<" ";
+                    cout<<rem<<'\n';
+                }
+                else{
+                    n = n-2;
+                    cout<<"Yes"<<'\n';
+                    for(int i = 0; i<n; i++) cout<<1<<" ";
+                    int rem = m - n;
+                    int q = rem>>1;
+                    cout<<q<<" "<<q<<'\n'; 
+                }
+            }
+        }
+        
     }
 
 
