@@ -23,6 +23,15 @@ using namespace std;
 //     }
 // }
 
+
+// #define n 1e9
+// const long long mod = (long long)(1LL<<32);
+
+// const long long nn = 1e9; ///// agar mod ki jagah n aise direct rakha toh nahi
+                            // chalega
+
+// bitset<mod>bits; // this will work fine but if used n it won't work
+
 int main(){
 
     ios::sync_with_stdio(false);
