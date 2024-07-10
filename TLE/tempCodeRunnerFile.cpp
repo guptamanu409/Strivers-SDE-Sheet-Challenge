@@ -1,2 +1,1 @@
-;
-        // else cout<<(sum+mini)<<'\n';
+i*i
